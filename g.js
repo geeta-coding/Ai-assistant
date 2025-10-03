@@ -69,7 +69,7 @@ recognition.onresult = function(event) {
   else if (transcript.includes(" ")) {
     const query = transcript.replace(" ", "").trim();
 
-    fetch("https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyAZS9rfJXWHvQW1KD47pYTWr7JPJPdYEhU", {
+    fetch("https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=enter your api key", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -105,4 +105,5 @@ stopBtn.addEventListener('click', () => {
   window.speechSynthesis.cancel(); // बोलणं थांबेल
   output.innerText = "Assistant stopped.";
 });
+
 
