@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feedback Form</title>
+  <link rel="stylesheet" href="feedback.css">
+</head>
+<style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: linear-gradient(black,rgb(57, 55, 55));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.page {
+  width: 100%;
+  max-width: 400px;
+}
+
+.panel {
+  background: #d7d3d3;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 20px 15px 15px rgba(72, 78, 239, 0.3);
+  text-align: center;
+}
+
+h2 {
+  margin-bottom: 20px;
+  color: #222728;
+    text-shadow: 0 0 10px #00e1ff, 0 0 20px #00e1ff;
+
+  
+}
+
+.field {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.field input,
+.field textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #e50c0c;
+  border-radius: 15px;
+  font-size: 15px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.field input:focus,
+.field textarea:focus {
+  border-color: #ff5e62;
+  box-shadow: 0px 0px 5px rgba(255,94,98,0.4);
+}
+
+button.btn {
+  width: 100%;
+  padding: 12px;
+  background: #264794;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button.btn:hover {
+  background: #6a51cc;
+}
+
+</style>
+<body>
+  <main class="page">
+    <section class="panel">
+      <h2><b>Give Your Feedback</b></h2>
+      
+      <form action="action.html" method="get">
+        <div class="field">
+          <input type="text" name="name" placeholder="Your Name" required>
+        </div>
+        <div class="field">
+          <textarea name="feedback" placeholder="Write your feedback..." rows="5" required></textarea>
+        </div>
+        <button class="btn" type="submit">Submit</button>
+      </form>
+    </section>
+  </main>
+</body>
+</html>

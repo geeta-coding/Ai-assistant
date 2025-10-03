@@ -1,0 +1,138 @@
+
+
+:root{
+  --bg: #001b3d;
+  --field: #3b4a66;
+  --field-border:#32425c;
+  --field-placeholder:#c5cfdf;
+  --text:#e8edf7;
+  --muted:#b0bdd3;
+  --link:#8ab4f8;
+  --shadow: 0 8px 28px rgba(0,0,0,.35);
+  --radius: 12px; /* rounded edges */
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body{
+  margin:0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.page{
+  min-height:100svh;
+  display:grid;
+  place-items:center;
+  padding: 40px 20px;
+}
+
+.panel{
+  width: 100%;
+  max-width: 560px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:32px; /* more gap overall */
+}
+
+.img{
+  width: 10px;
+  height: 80px;
+  background-repeat:no-repeat;
+  background-position:center;
+  background-size:contain;
+  filter: drop-shadow(0 6px 18px rgba(0,0,0,.35));
+}
+
+form{
+  width:100%;
+  display:flex;
+  flex-direction:column;
+  gap:24px; /* more space between fields */
+  align-items:center;
+}
+
+.field{
+  width: 100%;
+  max-width: 560px;
+  background: var(--field);
+  border: 1px solid var(--field-border);
+  border-radius: var(--radius);
+  padding: 16px 22px;
+  box-shadow: var(--shadow);
+}
+
+.field input{
+  width:100%;
+  border:0;
+  outline:0;
+  background:transparent;
+  color:var(--text);
+  font-size:18px;
+}
+.field input::placeholder{ color: var(--field-placeholder); opacity: .9; }
+
+.btn{
+  width: 60%;
+  min-width: 240px;
+  background: var(--field);
+  border: 1px solid var(--field-border);
+  color: var(--text);
+  border-radius: var(--radius);
+  padding: 14px 20px;
+  font-size: 18px;
+  cursor:pointer;
+  transition: transform .06s ease, filter .2s ease;
+  box-shadow: var(--shadow);
+}
+
+
+  h2 {
+  text-align: center;
+  font-size: 40px;
+  letter-spacing: 4px;
+  margin: 30px 0;
+  color: #e6e6e6;
+  text-shadow: 0 0 10px #3717c3, 
+               0 0 20px #50dc6e, 
+               0 0 40px #07d672;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 5px #11e098, 0 0 10px #00d4ff;
+  }
+  to {
+    text-shadow: 0 0 20px #0bc733, 0 0 40px #00d4ff, 0 0 60px #00d4ff;
+  }
+}
+
+.btn{
+    background-color:#2b4891;
+}
+.btn:hover{
+    background-color: #001b3d;
+    
+}
+
+
+.btn:hover{ filter: brightness(1.05); }
+.btn:active{ transform: translateY(1px); }
+
+.foot{
+  margin-top: 6px;
+  font-size: 16px;
+  color: var(--muted);
+}
+.foot a{
+  color: var(--link);
+  text-decoration: underline;
+}
+
+@media (min-width: 1200px){
+  .panel{ max-width: 620px; }
+}
+
